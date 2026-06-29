@@ -1,0 +1,33 @@
+# Virtual Environments
+venv/
+env/
+.env
+
+# Node
+node_modules/
+dist/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs and OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Project Specific Data (CRITICAL FOR PRIVACY)
+data/
+*.xlsx
+*.csv
+scratch/
+extracted_code.txt
+out1.txt
