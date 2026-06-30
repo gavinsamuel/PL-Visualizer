@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { UploadCloud, Loader2, Moon, Sun, RefreshCcw } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import Dashboard from './Dashboard';
 
 function App() {
@@ -134,6 +135,7 @@ function App() {
       )}
 
       {data && !loading && <Dashboard data={data} theme={theme} />}
+      <Analytics />
     </div>
   );
 }
