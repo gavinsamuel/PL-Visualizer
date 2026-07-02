@@ -15,14 +15,17 @@ stock visualizer/
 │   ├── test_backend.py        # Local API testing script
 │   └── venv/                  # Python virtual environment (ignored)
 ├── docs/                      # Project documentation and reports
-│   └── project_report.md      # Detailed project documentation (this file)
+│   ├── project_report.md      # Detailed project documentation (this file)
+│   ├── installation.md        # Step-by-step setup & troubleshooting guide
+│   └── changelog.md           # Version history and file-level change log
 └── frontend/                  # React + Vite frontend application
     ├── public/                # Static public assets
     ├── src/                   # React source code
     │   ├── assets/            # Local asset folder
     │   ├── App.css            # Styles for upload zone, header, and themes
     │   ├── App.jsx            # State management, layout, theme toggles, file upload
-    │   ├── Dashboard.jsx      # Metrics cards, Recharts visualizations
+    │   ├── Dashboard.jsx      # Metrics cards, charts, drill-down panel, table
+    │   ├── TradesTable.jsx    # Sortable/filterable per-trade data table
     │   ├── index.css          # Design system variables, global CSS rules
     │   └── main.jsx           # App initialization
     ├── .env                   # Configuration for VITE_API_URL
@@ -68,10 +71,23 @@ stock visualizer/
 * Colors are dynamically styled: green for profits (`val-positive`), red for losses (`val-negative`).
 
 ### 3. Advanced Data Visualizations
-* **Stacked P&L Breakdown by Ticker**: A comprehensive bar chart detailing options (PE vs. CE) and futures (FUT) splits for each stock ticker.
+* **Stacked P&L Breakdown by Ticker**: A comprehensive bar chart detailing options (PE vs. CE) and futures (FUT) splits for each stock ticker. Clicking a bar opens the Ticker Drill-Down Panel.
 * **Interactive Monthly Trend**: A filterable monthly breakdown allowing users to choose a specific ticker from a dropdown and view its historical monthly performance. Profits are represented as emerald bars, and losses as rose bars.
+* **All-Tickers Monthly Overview**: A toggle switch in the Monthly Trend chart switches to a stacked chart of **all tickers across all months**, colour-coded per ticker — mirroring the notebook's Cell 25 chart.
 
-### 4. Aesthetics and Themes
+### 4. Ticker Drill-Down Side Panel
+* Triggered by clicking any bar in the stacked chart or any ticker name in the trades table.
+* Slide-in panel from the right with blurred backdrop overlay.
+* Shows: **Total P&L**, **trade count**, **win / loss count**, a **mini monthly bar chart**, and a scrollable **list of all trades** for that ticker.
+
+### 5. All Trades Table
+* Full per-trade data table rendered below the charts after upload.
+* Columns: Symbol, Ticker, Month, Instrument Type, Quantity, Buy Value, Sell Value, P&L, P&L %.
+* **Sortable** by any column; **filterable** by month, instrument type (CE/PE/FUT/EQ), and ticker text search.
+* **Paginated** at 15 rows per page.
+* Colour-coded instrument badges and green/red P&L colouring.
+
+### 6. Aesthetics and Themes
 * Supports a clean and responsive dark/light mode toggle.
 * Custom global styling variable overrides using `[data-theme="dark"]` and `[data-theme="light"]`.
 
@@ -166,6 +182,8 @@ The processor extracts underlying metadata from complex option/future symbols us
 ## 🔌 Setup & Local Installation
 
 For a step-by-step setup and installation walkthrough including troubleshooting and port configuration, refer to the dedicated **[Installation & Setup Instructions](file:///Users/gavin/Downloads/stock%20visualizer/docs/installation.md)** guide.
+
+For a full history of all changes and what files were modified per version, see the **[Changelog](file:///Users/gavin/Downloads/stock%20visualizer/docs/changelog.md)**.
 
 ### Prerequisites
 * Python 3.8+

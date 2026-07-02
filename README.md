@@ -14,6 +14,7 @@ Detailed project documentation and guides are available under the `docs/` folder
 
 * 👉 **[Detailed Project Report](file:///Users/gavin/Downloads/stock%20visualizer/docs/project_report.md)**: A complete walkthrough of the architecture, tech stack, API endpoints, regex parsing patterns, and backend/frontend designs.
 * 👉 **[Installation & Setup Instructions](file:///Users/gavin/Downloads/stock%20visualizer/docs/installation.md)**: A step-by-step setup guide covering environment variables, dependencies, running servers, and troubleshooting.
+* 👉 **[Changelog](file:///Users/gavin/Downloads/stock%20visualizer/docs/changelog.md)**: Full version history with file-level change details for every release.
 
 ## 🛠️ Quick Start
 
