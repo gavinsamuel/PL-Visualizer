@@ -10,9 +10,10 @@ This project consists of:
 
 ## 📂 Project Documentation
 
-A comprehensive project report outlining the directory structure, technology stack, features, backend pipeline details, API documentation, and step-by-step local setup is available here:
+Detailed project documentation and guides are available under the `docs/` folder:
 
-👉 **[Detailed Project Report](file:///Users/gavin/Downloads/stock%20visualizer/docs/project_report.md)**
+* 👉 **[Detailed Project Report](file:///Users/gavin/Downloads/stock%20visualizer/docs/project_report.md)**: A complete walkthrough of the architecture, tech stack, API endpoints, regex parsing patterns, and backend/frontend designs.
+* 👉 **[Installation & Setup Instructions](file:///Users/gavin/Downloads/stock%20visualizer/docs/installation.md)**: A step-by-step setup guide covering environment variables, dependencies, running servers, and troubleshooting.
 
 ## 🛠️ Quick Start
 
@@ -32,4 +33,4 @@ npm install
 npm run dev
 ```
 
-For more details, check out the [Project Report](file:///Users/gavin/Downloads/stock%20visualizer/docs/project_report.md).
+For more details, check out the **[Project Report](file:///Users/gavin/Downloads/stock%20visualizer/docs/project_report.md)** and the **[Installation & Setup Instructions](file:///Users/gavin/Downloads/stock%20visualizer/docs/installation.md)**.

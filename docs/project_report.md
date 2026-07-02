@@ -165,6 +165,8 @@ The processor extracts underlying metadata from complex option/future symbols us
 
 ## 🔌 Setup & Local Installation
 
+For a step-by-step setup and installation walkthrough including troubleshooting and port configuration, refer to the dedicated **[Installation & Setup Instructions](file:///Users/gavin/Downloads/stock%20visualizer/docs/installation.md)** guide.
+
 ### Prerequisites
 * Python 3.8+
 * Node.js (version 16 or newer)
