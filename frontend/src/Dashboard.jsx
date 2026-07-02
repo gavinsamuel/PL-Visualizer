@@ -5,6 +5,7 @@ import {
 } from 'recharts';
 import { ChevronDown, X } from 'lucide-react';
 import TradesTable from './TradesTable';
+import GroupedBreakdown from './GroupedBreakdown';
 
 // ── Formatters ────────────────────────────────────────────────────────────────
 const formatCurrency = (value) => {
@@ -275,6 +276,12 @@ export default function Dashboard({ data, theme }) {
             </div>
           </div>
         </div>
+
+        {/* ── Grouped P&L Breakdown (notebook-style) ────────────────────── */}
+        <GroupedBreakdown
+          ticker_breakdown={ticker_breakdown}
+          theme={theme}
+        />
 
         {/* ── Trades Table ─────────────────────────────────────────────────── */}
         {raw_trades.length > 0 && (

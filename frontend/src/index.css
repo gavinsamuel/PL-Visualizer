@@ -675,3 +675,65 @@ select.clean-select {
 
 /* Dashboard container bottom spacing */
 .dashboard-container { padding-bottom: 3rem; }
+
+/* ── Grouped P&L Breakdown section ─────────────────────────────────────────── */
+.grouped-breakdown-section {
+  margin-top: 2rem;
+}
+
+.grouped-breakdown-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.25rem;
+}
+
+.grouped-breakdown-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.grouped-breakdown-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Two charts side-by-side; stack on narrow screens */
+.grouped-breakdown-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .grouped-breakdown-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grouped-chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.grouped-chart-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tall enough to show rotated labels + value annotations without clipping */
+.grouped-chart-wrapper {
+  width: 100%;
+  height: 420px;
+  flex: 1;
+}
